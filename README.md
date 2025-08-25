@@ -58,7 +58,20 @@
   - Backend URL: `http://localhost:8080`
   - Frontend URL: `http://localhost:3000`
 
+## การใช้งาน JWT
+- ระบบใช้ **JWT (JSON Web Token)** ในการยืนยันตัวตนของผู้ใช้งานหลังจากการ login
+- หลังจากที่ผู้ใช้ล็อกอินสำเร็จ ระบบจะส่ง JWT token ไปยัง frontend
+- ผู้ใช้สามารถใช้ token นี้ในการเข้าถึงข้อมูลที่ต้องการผ่าน API ที่มีการป้องกัน
 
+**ตัวอย่างการเข้าสู่ระบบ (Login):**
+- เมื่อผู้ใช้ login ด้วย **email** และ **password** ที่ถูกต้อง, ระบบจะส่ง JWT token ให้
+- ใช้ token นี้ในการเข้าถึงส่วนต่าง ๆ ของโปรเจค เช่น การดึงข้อมูลผู้ใช้ หรือการแก้ไขข้อมูล
+
+### ข้อมูลบัญชีผู้ใช้งาน (Admin)
+- สำหรับการทดสอบระบบ คุณสามารถใช้บัญชี **admin** ที่มีข้อมูลดังนี้:
+    - **Email**: `admin@example.com`
+    - **Password**: `admin123`
+    
 ### การ Login
 ภาพตัวอย่างการ Login:
 ![Login](https://media.discordapp.net/attachments/1359450746810011680/1409567493357309962/image.png?ex=68add986&is=68ac8806&hm=37e5d013fbe210ccadbedcdd3bcf4ab29e0fa832bf85955ecd694c63527c1d40&=&format=webp&quality=lossless&width=1027&height=545)
@@ -85,8 +98,8 @@
 
 ### การจัดการผู้ใช้
 ภาพตัวอย่างการจัดการผู้ใช้:
-![Manage Users](https://media.discordapp.net/attachments/1359450746810011680/1409568313285148672/image.png?ex=68adda4a&is=68ac88ca&hm=7d34f5cd84b716cabab255ee0683bf355ca512e29c47d71e723af48dd7e5c49b&=&format=webp&quality=lossless&width=1117&height=545)
+![Manage Users](https://media.discordapp.net/attachments/1359450746810011680/1409584475980955748/image.png?ex=68ade957&is=68ac97d7&hm=9a41b943495c1593c809377eb196770764c31e5f47e8ed389c2a5f388fab3fdd&=&format=webp&quality=lossless&width=1232&height=335)
 
 ### การดึงข้อมูลผู้ใช้
 ภาพตัวอย่างการดึงข้อมูลผู้ใช้:
-![Fetch Users](https://media.discordapp.net/attachments/1359450746810011680/1409568346592116777/image.png?ex=68adda52&is=68ac88d2&hm=d0ea2a6180857f9edb5f5fd3e0e5b2efbebc8956fdd6b61ee13542857d9d25a6&=&format=webp&quality=lossless)
+![Fetch Users](https://media.discordapp.net/attachments/1359450746810011680/1409584510227579100/image.png?ex=68ade960&is=68ac97e0&hm=6a97f6e9f31fb7ae123c121fcbf0bb73c63886d6493477331ee9e5a0d62f2998&=&format=webp&quality=lossless)
